@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #0000008a; */
+}
+li, p, a, footer .right{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+h2{
+    font-size: 26px;
+    color: #42A7C2;
+}
+main{
+    margin: 0 360px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+.left-container{
+    width: 270px;
+    height: 3015px;
+    /* background-color: #42A7C2; */
+}
+
+.left-container .left-Navi{
+    width: 220px;
+    height: 521px;
+    /* position: fixed; */
+    border: 2px solid #E1E8EF;
+}
+.left-Navi{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+    align-items: center; */
+    margin-top: 10px;
+}
+.left-Navi .menu-navigation ul li a {
+    margin: 0 20px;
+    color: #000;
+}
+.left-Navi .logo-navigation img{
+    margin: 32px 20px 0 20px;
+}
+.left-Navi .logo-navigation button{
+    color: #FFF;
+    width: 176px;
+    height: 43px;
+    background-color: #42A7C2;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 18px 20px 27px 20px;
+}
+.left-Navi .menu-navigation ul li{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E1E8EF;
+}
+.left-Navi .menu-navigation ul li img{
+    margin-right: 20px;
+}
+.left-Navi ul li{
+    display: block;
+}
+
+/* header */
+.right-container{
+    width: 931px;
+    /* background-color: gray; */
+    height: 3015px;
+}
+ 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.header ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+.header ul li a{
+    font-size: 14px;
+    transition: all 0.3 ease 0s;
+    color: #7B7B7B;
+}
+.header ul li:hover a{
+    color: #42A7C2;
+}
+.nav-home{
+    order: 1;
+}
+.nav-links{
+    order: 2;
+}
+/* wrap search */
+.wrap-search{
+    background-color: #EAF1F7;
+    height: 90px;
+    width: 930px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap-search .left p{
+    margin-left: 84px;
+}
+.wrap-search .right{
+    display: flex;
+    align-items: center;
+    width: 533px;
+    margin-right: 100px;
+}
+.wrap-search .right .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wrap-search .right .search img{
+    margin-left: 20px;
+}
+.wrap-search .right .search input{
+    height: 45px;
+    width: 350px ;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.wrap-search .right .search{
+    background-color: #FFF;
+    height: 50px;
+    width: 426px;
+    border-radius: 60px;
+
+}
+.wrap-search .right .button-search button{
+    height: 49px;
+    width: 94px;
+    color: #FFF;
+    background-color: #42A7C2;
+    border:  none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.search_Button button{
+    padding: 9px 25px;
+    background-color: #42A7C2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #FFF;
+    font-size: 16px;
+}
+/* title guide */
+.title-guide{
+    display: flex;
+    margin: 48.5px 0 20px 0;
+}
+.title-guide h2, p{
+    margin-left: 20.3px;
+}
+.table-start{
+    display: flex;
+    justify-content: space-between;
+}
+.table-start .table{
+    height: 145px;
+    width: 300px;
+    border: 1px solid #42A7C2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table-start .table div{
+    height: 54px;
+    width: 204px;
+}
+.table-end{
+    display: flex;
+    justify-content: space-between;
+}
+.table-end .table{
+    height: 145px;
+    width: 300px;
+    margin-top: 15px;
+    border: 1px solid #42A7C2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table-end .table div{
+    height: 54px;
+    width: 204px;
+}
+.conten-guide p{
+    text-align: center;
+}
+footer{
+    width: 100%;
+    height: 75px;
+    background-color: #333333;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+footer .right{
+    margin-right: 360px;
+    color: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+}
