@@ -11,6 +11,10 @@
 }
 .container {
     width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     /* background-color: #aab4b791; */
 
 }
@@ -23,12 +27,8 @@ h2{
     font-size: 26px;
     color: #42A7C2;
 }
-.container{
-    display: flex;
-    justify-content: center;
-}
 .left-container{
-    background-color: #42A7C2;
+    /* background-color: #42A7C2; */
 }
 .left-Navi{
     display: flex;
@@ -37,6 +37,7 @@ h2{
     align-items: center;
     margin: 10px 50px 0 0;
     border: 2px solid #E1E8EF;
+    position: fixed;
 }
 .left-Navi .menu-navigation ul li a {
     margin: 0 20px;
@@ -71,8 +72,8 @@ h2{
 
 /* header */
 .right-container{
-    width: 931px;
-    height: 2940px;
+    /* width: 931px;
+    height: 2940px; */
     /* background-color: gray; */
     /* height: 760px; */
 }
@@ -414,16 +415,32 @@ footer .end{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        margin-top: 247px;
     }
-    .container .left-Navi {
+    .container .left-container{
+        background-color: #FFF;
+        display: contents;
+    }
+    .container .left-container .left-Navi {
         width: 930px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         border: none;
         margin-right: 0;
-        /* position: fixed; */
+        overflow: hidden;
+        position: fixed; /* Đặt thanh menu vào vị trí sticky */
+        top: 0; /* Đặt thanh menu ở đầu trang */
+        width: 100%;
+        background-color: #FFF;
+    }
+    .container .left-Navi .logo-navigation ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 930px;
     }
     .container .left-Navi .menu-navigation ul {
         display: flex;
@@ -437,12 +454,241 @@ footer .end{
         border:  none;
     }
 }
-@media only screen and (max-width: 700px){
-    #main{
-        width: 100%;
+@media only screen and (max-width: 970px){
+    /* .container .left-container .left-Navi .logo-navigation{
+        width: 820px;
     }
+    .container .left-container .left-Navi .menu-navigation{
+        width: 820px;
+    }
+
+    .container .right-container .header{
+        width: 820px;
+    } */
+}
+@media only screen and (max-width: 390px){
     .container{
-        /* display: flex;
-        flex-direction: column; */
+        margin-top: 247px;
     }
+    .container .left-container .left-Navi .logo-navigation{
+        width: 390px;
+        
+    }
+    .container .left-container .left-Navi .menu-navigation ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #E1E8EF;
+        width: 390px;
+    }
+
+    .container .right-container{
+        margin-top: 247px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .right-container .header{
+        width: 390px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .container .right-container .wrap-search{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 390px;
+        height: 160px;
+        border-radius: 0px;
+    }
+    .container .right-container .wrap-search .left p{
+        margin: 15px 0 0 0;
+    }
+    .container .right-container .wrap-search .right{
+        height: 50px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 0 20px 0;
+    }
+    .container .right-container .wrap-search .right .search{
+        width: 320px;
+    }
+    .container .right-container .wrap-search .right .search input {
+        height: 45px;
+        width: 255px;
+    }
+    .container .right-container .wrap-search .right .button-search button {
+        margin: 15px 0;
+        width: 320px;
+    }
+    .container .title-guide{
+        width: 390px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .title-guide .right h2, .container .title-guide .right p{
+        margin: 0 20px;
+    }
+    .conten-guide{
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .conten-guide .table-start{
+        width: 380px;
+        height: 435px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .conten-guide .table-start .table{
+        margin-top: 15px;
+    }
+    .container .conten-output{
+        width: 390px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .conten-output .right h2, .container .conten-output .right p{
+        margin: 0 20px;
+    }
+    .conten-guide .table-end{
+        width: 380px;
+        height: 435px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content-output-icon {
+        height: auto;
+    }
+    .content-output-icon .start{
+        height: 780px;
+    }
+    .container .subTitle h2{
+        margin-left: 50px;
+    }
+    .content-output-icon .table-subTitle{
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content-output-icon .table-subTitle .table{
+        margin-top: 15px;
+    }
+    .conten-guide .table-subTitle .table{
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content-output-icon .center{
+        height: 780px;
+    }
+    .container .subTitle h2{
+        margin-left: 50px;
+    }
+    .content-output-icon .table-subTitle{
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content-output-icon .table-subTitle .table{
+        margin-top: 15px;
+    }
+    .conten-guide .table-subTitle .table{
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content-output-icon .end{
+        height: 780px;
+    }
+    .container .subTitle h2{
+        margin-left: 50px;
+    }
+    .content-output-icon .table-subTitle{
+        width: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .content-output-icon .table-subTitle .table{
+        margin-top: 15px;
+    }
+    .conten-guide .table-subTitle .table{
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .title-function{
+        width: 390px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container .title-function .right h2, .container .title-function .right p{
+        margin: 0 20px;
+    }
+
+    .content-function {
+        height: 796px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .content-function .left {
+        width: 180px;
+    }
+    .content-function .right {
+        width: 180px;
+    }
+    .content-function .subTitle {
+        /* height: 53px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top: 1px solid #42A7C2; */
+        margin-right: 10px;
+    }
+    footer .center{
+        margin: 0 20px;
+    }
+    footer .end {
+        width: 0;
+    }
+
 }
